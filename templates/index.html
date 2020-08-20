@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% if 'user' in session %}
+<p>You are logged in as {{session['user']}}!</p>
+<p>Log out <a href='/logout'>here</a></p>
+{% else %}
+<p>You aren't logged in!</p>
+<p>Log in <a href='/login'>here</a></p>
+<p>Sign up <a href='/signup'>here</a></p>
+{% endif %}
+
+{% endblock %}

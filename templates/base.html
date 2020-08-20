@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <meta name="author" content="Your name here" >
+		<meta name="keywords" content="keywords,go,here" >
+
+    <title>Title here{% block title %}{% endblock%}</title>
+
+		<meta name="theme-color" content="#00cc00"><!--put your colour there-->
+
+    <meta property="og:title" content="{% block ogp_title %}Title here{% endblock %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Put a description here"/>
+    <meta property="og:image" content="{% block ogp_img %}/favicon.ico{% endblock %}" /><!-- get a favicon -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Coding-Cactus/cactus.css@latest/cactus.css">
+
+		{% block head %}{% endblock %}
+
+  </head>
+  <body>
+		<main>
+			{% block main %}{% endblock %}
+		</main>
+		{% block other %}{% endblock %}
+  </body>
+</html>
